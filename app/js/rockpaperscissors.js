@@ -52,11 +52,11 @@ function getWinner(playerMove,computerMove) {
     if (playerMove == computerMove) {
       console.log("draw");
     }
-    else if (playerMove == rocks && computerMove == paper) || (playerMove == paper && computerMove == scissors) || (playerMove == scissors && computerMove == rocks) {
+    if ((playerMove == rock && computerMove == paper) || (playerMove == paper && computerMove == scissors) || (playerMove == scissors && computerMove == rock)) {
       winner = "Computer";
       console.log(winner);
     }
-    else if (playerMove == paper && computerMove == rocks) || (playerMove == scissors && computerMove == paper) || (playerMove == rocks && computerMove == scissors) {
+    if ((playerMove == paper && computerMove == rock) || (playerMove == scissors && computerMove == paper) || (playerMove == rock && computerMove == scissors)) {
       winner = "Player";
       console.log(winner);
     }
